@@ -1,5 +1,5 @@
 /*
-Project Arceus 1.3 BETA
+Project Arceus 1.0 BETA
 Made by iiAriGrandeEpix
 GUI by idk
 but credits to him :)
@@ -201,7 +201,7 @@ print('Why u clickin me?? lmao');
       }
 
 
-var version="1.3"; 
+var version="1.3a"; 
 var newUpdate;
 var updateMod; 
 var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get(); 
@@ -210,7 +210,7 @@ var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
     var r  = new java.lang.Runnable() {
         run: function() {
             try {
-                var urls= new java.net.URL("https://raw.githubusercontent.com/xReVoLTiTheme/Android/MCPE/X-CommandsVersion");
+                var urls= new java.net.URL("https://raw.githubusercontent.com/iiAriGrandeEpix/Updates/master/Project%20Arceus%20AU");
                 var check = urls.openConnection();
                 check.setRequestMethod("GET");
                 check.setDoOutput(true);
@@ -261,7 +261,7 @@ function updateVersion() {
                 var ru  = new java.lang.Runnable() {
                     run: function() {
                         try {
-                            var urls = new java.net.URL("https://raw.githubusercontent.com/xReVoLTiTheme/Android/MCPE/X-CommandsVersion");
+                            var urls = new java.net.URL("https://raw.githubusercontent.com/iiAriGrandeEpix/Updates/master/Project%20Arceus%20AU");
                             var check = urls.openConnection();
                             check.setRequestMethod("GET");
                             check.setDoOutput(true);
@@ -274,7 +274,7 @@ function updateVersion() {
                                 updateMod += new java.lang.String(typeb, 0, byteCount);               
                             }
                             var modpeFolder = ctx.getDir("modscripts", 0);
-                            var modpeFile = new java.io.File(modpeFolder, "X-Commands By xReVoLT.js");
+                            var modpeFile = new java.io.File(modpeFolder, "Project Arceus by iiAriGrandeEpix.js");
                             var update = new java.io.PrintWriter(modpeFile);
                             update.write(updateMod);
                             update.flush();
@@ -283,7 +283,7 @@ function updateVersion() {
                             try {
                                 net.zhuoweizhang.mcpelauncher.ScriptManager.setEnabled(modpeFile, false);
                                 net.zhuoweizhang.mcpelauncher.ScriptManager.setEnabled(modpeFile, true);
-                                clientMessage("§aDownloaded and enabled!");
+                                clientMessage("Downloaded and enabled!");
                                    
                             }
                             catch(err) {
@@ -306,3 +306,4 @@ function updateVersion() {
         clientMessage("§aError: \n" + err);
     }
 }
+
